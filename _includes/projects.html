@@ -9,10 +9,12 @@
   <div class="contents{% cycle "","-right" %}">
     <h3> {{ proyect.title }} </h3>
     <ul>
-      <li> {{proyect.category}}</li>
+    {% for cat in proyect.categories %}
+      <li>{{ cat }}</li>
+    {% endfor %}
     </ul>
     <p>{{proyect.description}}</p>
-    <a class="project-link" href="{{proyect.url}}.html">Ver proyecto</a>
+    <a class="project-link" href="{{proyect.url}}.html">Ver</a>
   </div>
 </div>
 {% endfor %}
